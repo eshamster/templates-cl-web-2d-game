@@ -1,13 +1,13 @@
-(defpackage {{name}}/src/server
+(defpackage {{name}}/server
   (:use :cl
         :cl-web-2d-game
         :cl-markup)
   (:export :start
            :stop)
-  (:import-from :{{name}}/src/game/game
+  (:import-from :{{name}}/game/game
                 :init-func
                 :update-func))
-(in-package :{{name}}/src/server)
+(in-package :{{name}}/server)
 
 ;; --- Definitions about directories --- ;;
 

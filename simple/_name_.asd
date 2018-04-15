@@ -27,7 +27,7 @@
                :ningle
                :cl-markup
                :clack
-               :{{name}}/src/{{name}})
+               :{{name}}/main)
   :description "{{description}}"
   :long-description
   #.(with-open-file (stream (merge-pathnames

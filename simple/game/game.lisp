@@ -1,13 +1,13 @@
-(defpackage {{name}}/src/game/game
+(defpackage {{name}}/game/game
   (:use :cl
         :ps-experiment
         :cl-ps-ecs
         :cl-web-2d-game)
   (:export :init-func
            :update-func)
-  (:import-from :{{name}}/src/game/{{name}}-state
+  (:import-from :{{name}}/game/{{name}}-state
                 :make-{{name}}-start-state))
-(in-package :{{name}}/src/game/game)
+(in-package :{{name}}/game/game)
 
 (defun.ps+ init-func (scene)
   (init-game-state (make-{{name}}-start-state))

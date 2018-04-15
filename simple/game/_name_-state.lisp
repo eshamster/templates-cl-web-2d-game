@@ -1,10 +1,10 @@
-(defpackage {{name}}/src/game/{{name}}-state
+(defpackage {{name}}/game/{{name}}-state
   (:use :cl
         :ps-experiment
         :cl-ps-ecs
         :cl-web-2d-game)
   (:export :make-{{name}}-start-state))
-(in-package :{{name}}/src/game/{{name}}-state)
+(in-package :{{name}}/game/{{name}}-state)
 
 (defstruct.ps+
     ({{name}}-main-state
