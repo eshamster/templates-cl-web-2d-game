@@ -9,11 +9,6 @@
   Author: {{author}} ({{email}})
 |#
 
-(in-package :cl-user)
-(defpackage {{name}}-asd
-  (:use :cl :asdf))
-(in-package :{{name}}-asd)
-
 (defsystem {{name}}
   :version "0.1"
   :class :package-inferred-system
@@ -41,4 +36,14 @@
                                :fill-pointer t)))
           (setf (fill-pointer seq) (read-sequence seq stream))
           seq)))
-  :in-order-to ((test-op (test-op {{name}}-test))))
+  :in-order-to ((test-op (test-op {{name}}/t))))
+
+(defsystem {{name}}/t
+  :class :package-inferred-system
+  :depends-on (:ps-experiment
+               :ps-experiment/t
+               :rove
+               :alexandria
+               :cl-js
+               "{{name}}/t/main")
+  :perform (test-op (o c) (symbol-call :rove '#:run c)))

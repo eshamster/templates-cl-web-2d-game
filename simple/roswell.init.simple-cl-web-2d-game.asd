@@ -7,16 +7,14 @@
       "{{name}}/static/css/viewer.css")
      (:NAME "game/_name_-state.lisp" :METHOD "djula" :REWRITE
       "{{name}}/game/{{name}}-state.lisp")
-     (:NAME "_name_-test.asd" :METHOD "djula" :REWRITE
-      "{{name}}/{{name}}-test.asd")
      (:NAME "_name_.asd" :METHOD "djula" :REWRITE "{{name}}/{{name}}.asd")
      (:NAME "qlfile.lock" :METHOD "djula" :REWRITE "{{name}}/qlfile.lock")
      (:NAME "README.markdown" :METHOD "djula" :REWRITE
       "{{name}}/README.markdown")
      (:NAME ".gitignore" :METHOD "djula" :REWRITE "{{name}}/.gitignore")
      (:NAME "qlfile" :METHOD "djula" :REWRITE "{{name}}/qlfile")
-     (:NAME "t/_name_.lisp" :METHOD "djula" :REWRITE
-      "{{name}}/t/{{name}}.lisp")
+     (:NAME "t/main.lisp" :METHOD "djula" :REWRITE
+      "{{name}}/t/main.lisp")
      (:NAME "main.lisp" :METHOD "djula" :REWRITE
       "{{name}}/main.lisp")
      (:NAME "game/game.lisp" :METHOD "djula" :REWRITE
