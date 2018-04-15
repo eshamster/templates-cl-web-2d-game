@@ -3,11 +3,11 @@
         :ps-experiment
         :cl-ps-ecs
         :cl-web-2d-game)
-  (:export :make-{{name}}-start-state))
+  (:export :make-game-start-state))
 (in-package :{{name}}/game/{{name}}-state)
 
 (defstruct.ps+
-    ({{name}}-main-state
+    (game-main-state
      (:include game-state
                (start-process
                 (lambda (_this)
@@ -19,7 +19,7 @@
                   nil)))))
 
 (defstruct.ps+
-    ({{name}}-start-state
+    (game-start-state
      (:include game-state
                (start-process
                 (lambda (_this)
@@ -29,7 +29,7 @@
                (process
                 (lambda (_this)
                   (declare (ignore _this))
-                  (make-{{name}}-main-state)))
+                  (make-game-main-state)))
                (end-process
                 (lambda (_this)
                   t)))))
