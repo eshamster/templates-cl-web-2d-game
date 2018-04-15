@@ -1,6 +1,6 @@
-(DEFPACKAGE :ROSWELL.INIT.CL-WEB-2D-GAME
+(DEFPACKAGE :ROSWELL.INIT.SIMPLE-CL-WEB-2D-GAME
   (:USE :CL))
-(IN-PACKAGE :ROSWELL.INIT.CL-WEB-2D-GAME)
+(IN-PACKAGE :ROSWELL.INIT.SIMPLE-CL-WEB-2D-GAME)
 (DEFVAR *PARAMS*
   '(:FILES
     ((:NAME "static/css/viewer.css" :METHOD "copy" :REWRITE
@@ -23,7 +23,7 @@
       "{{name}}/src/game/game.lisp")
      (:NAME "src/server.lisp" :METHOD "djula" :REWRITE
       "{{name}}/src/server.lisp"))))
-(DEFUN CL-WEB-2D-GAME (_ &REST R)
+(DEFUN SIMPLE-CL-WEB-2D-GAME (_ &REST R)
   (ASDF/OPERATE:LOAD-SYSTEM :ROSWELL.UTIL.TEMPLATE :VERBOSE NIL)
   (FUNCALL (READ-FROM-STRING "roswell.util.template:template-apply") _ R
            *PARAMS*))
