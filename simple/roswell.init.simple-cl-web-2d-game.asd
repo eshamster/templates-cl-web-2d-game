@@ -5,8 +5,12 @@
   '(:FILES
     ((:NAME "static/css/viewer.css" :METHOD "copy" :REWRITE
       "{{name}}/static/css/viewer.css")
-     (:NAME "game/_name_-state.lisp" :METHOD "djula" :REWRITE
-      "{{name}}/game/{{name}}-state.lisp")
+     (:NAME "game/state/global-init.lisp" :METHOD "djula" :REWRITE
+      "{{name}}/game/state/global-init.lisp")
+     (:NAME "game/state/main.lisp" :METHOD "djula" :REWRITE
+      "{{name}}/game/state/main.lisp")
+     (:NAME "game/state/package.lisp" :METHOD "djula" :REWRITE
+      "{{name}}/game/state/package.lisp")
      (:NAME "_name_.asd" :METHOD "djula" :REWRITE "{{name}}/{{name}}.asd")
      (:NAME "qlfile.lock" :METHOD "djula" :REWRITE "{{name}}/qlfile.lock")
      (:NAME "README.markdown" :METHOD "djula" :REWRITE

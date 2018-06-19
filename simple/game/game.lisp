@@ -5,12 +5,12 @@
         :cl-web-2d-game)
   (:export :init-func
            :update-func)
-  (:import-from :{{name}}/game/{{name}}-state
-                :make-game-start-state))
+  (:import-from :{{name}}/game/state/package
+                :init-{{name}}-state))
 (in-package :{{name}}/game/game)
 
 (defun.ps+ init-func (scene)
-  (init-game-state (make-game-start-state))
+  (init-{{name}}-state)
   (init-default-systems :scene scene)
   (init-input))
 
