@@ -13,7 +13,10 @@ $ git clone https://github.com/eshamster/templates-cl-web-2d-game.git
 $ cd templates-cl-web-2d-game/simple
 $ ros template import
 $ cd ~/.roswell/local-projects
-$ ros init simple-cl-web-2d-game sample-clw2d # "sample-clw2d" is your project name
+# "sample-clw2d" is your project name
+$ ros init simple-cl-web-2d-game sample-clw2d \
+      --license LLGPL \
+      --description "This is a sample using cl-web-2d-game."
 $ cd sample-clw2d
 $ ros install qlot
 $ qlot install
