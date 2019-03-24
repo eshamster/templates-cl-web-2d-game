@@ -8,15 +8,14 @@
 (def-game-state main ((parent (make-ecs-entity)))
   :start-process
   (state-lambda (parent)
-    (with-ecs-entity-parent (parent)
-      )
+    (stack-default-ecs-entity-parent parent)
     t)
   :process
-  (state-lambda (parent)
-    (with-ecs-entity-parent (parent)
-      )
+  (state-lambda ()
     nil)
   :end-process
   (state-lambda (parent)
+    (let ((got-parent (pop-default-ecs-entity-parent)))
+      (assert (eq parent got-parent)))
     (delete-ecs-entity parent)
     t))
