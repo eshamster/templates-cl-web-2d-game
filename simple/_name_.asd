@@ -12,7 +12,6 @@
 (defsystem {{name}}
   :version "0.1"
   :class :package-inferred-system
-  :defsystem-depends-on (:asdf-package-system)
   :author "{{author}}"
   :license "{{license}}"
   :depends-on (:parenscript
