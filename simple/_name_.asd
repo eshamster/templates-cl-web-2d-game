@@ -1,6 +1,6 @@
 #|
   This file is a part of {{name}} project.
-  Copyright (c) 2018 {{author}} ({{email}})
+  Copyright (c) 2019 {{author}} ({{email}})
 |#
 
 #|
